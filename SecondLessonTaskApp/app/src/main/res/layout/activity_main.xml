@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="33dp"
+        android:text="Кириллица-Латиница"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Kyr"
+        app:layout_constraintEnd_toEndOf="@+id/Kyr"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="14"
+        android:hint="Input text"
+        android:inputType="textPersonName"
+        android:padding="7dp"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/Kyr"
+        app:layout_constraintTop_toBottomOf="@+id/Kyr" />
+
+    <TextView
+        android:id="@+id/Kyr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:paddingBottom="5dp"
+        android:text="Кириллица"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/outputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/view_text_border"
+        android:ems="14"
+        android:hint="Perevod"
+        android:padding="7dp"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/Lat"
+        app:layout_constraintTop_toBottomOf="@+id/Lat" />
+
+    <TextView
+        android:id="@+id/Lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="#0000857A"
+        android:paddingBottom="5dp"
+        android:text="Latinsha"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText" />
+
+    <Button
+        android:id="@+id/buttonTranslate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="12"
+        android:text="Перевести"
+        android:textColor="#32DAE0"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnknownId" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="26dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="215dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        app:srcCompat="@drawable/gearwheel2"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/outputText"
+        android:id="@+id/textViewKol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textSize="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@+id/textViewKol"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTranslate"
+        android:id="@+id/wordsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#004CB8E0"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
